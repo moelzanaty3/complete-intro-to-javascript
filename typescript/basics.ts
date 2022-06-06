@@ -8,7 +8,7 @@
 // console.log(test);
 
 /**
- * ✅ Explicit type 
+ * ✅ Explicit type
  * generally it’s manifestly adding type to our codebase.
  * */
 
@@ -17,22 +17,24 @@
 // console.log(test);
 
 /**
- * ✅ Explicit type 
+ * ✅ Explicit type
  * generally it’s manifestly adding type to our codebase.
  * */
 
 // let test: string = 123 // Type 'number' is not assignable to type 'string'.
-// test = 'm.elzanaty'; 
+// test = 'm.elzanaty';
 // console.log(test);
 
 /**
  * ✅ Type any
- * we do not always have prior knowledge about the type of some variables, especially when there are user-entered values from third party libraries. In such cases, we need a provision that can deal with dynamic content. The Any type comes in handy here.
- * Unlike unknown, variables of type any allow you to access arbitrary properties, even ones that don’t exist. 
+ * we do not always have prior knowledge about the type of some variables,
+ * especially when there are user-entered values from third party libraries.
+ * In such cases, we need a provision that can deal with dynamic content. The Any type comes in handy here.
+ * Unlike unknown, variables of type any allow you to access arbitrary properties, even ones that don’t exist.
  * */
 
-// let test: any = 123 
-// test = 'm.elzanaty'; 
+// let test: any = 123
+// test = 'm.elzanaty';
 // console.log(test);
 
 // let looselyTyped: any = 4;
@@ -40,7 +42,7 @@
 // looselyTyped.ifItExists();
 // // OK, toFixed exists (but the compiler doesn't check)
 // looselyTyped.toFixed();
- 
+
 // let strictlyTyped: unknown = 4;
 // strictlyTyped.toFixed();
 
@@ -50,21 +52,21 @@
  * use more than one data type for a variable or a function parameter
  * */
 
-// let test: number | string = 123 
-// test = 'm.elzanaty'; 
+// let test: number | string = 123
+// test = 'm.elzanaty';
 // test = {} // Type '{}' is not assignable to type 'string | number'
 // console.log(test);
 
 // custom type generic
 
 // type NumString = number | string
-// let test: NumString = 123 
-// test = 'm.elzanaty'; 
+// let test: NumString = 123
+// test = 'm.elzanaty';
 // console.log(test);
 
 // custom type and there's another way to do this which is 🔴 Enum
 
 // type Status = 'success' | 'error' | 'pending'
-// let test: Status = 'success' 
-// test = 'error'; 
+// let test: Status = 'success'
+// test = 'error';
 // console.log(test);
