@@ -31,6 +31,16 @@
  * especially when there are user-entered values from third party libraries.
  * In such cases, we need a provision that can deal with dynamic content. The Any type comes in handy here.
  * Unlike unknown, variables of type any allow you to access arbitrary properties, even ones that don’t exist.
+ *
+ * hey are different in semantics.
+ * unknown is the parent type of all other types. it's a regular type in the type system.
+ * any means "turn off the type check". it's kind of meta programming.
+ * any:
+ *  allows being assigned to any type
+ *  allows calling any method
+ * unknown:
+ *  doesn't allow being assigned to any type
+ *  doesn't allow calling any method
  * */
 
 // let test: any = 123
@@ -38,9 +48,9 @@
 // console.log(test);
 
 // let looselyTyped: any = 4;
-// // OK, ifItExists might exist at runtime
+// OK, ifItExists might exist at runtime
 // looselyTyped.ifItExists();
-// // OK, toFixed exists (but the compiler doesn't check)
+// OK, toFixed exists (but the compiler doesn't check)
 // looselyTyped.toFixed();
 
 // let strictlyTyped: unknown = 4;
