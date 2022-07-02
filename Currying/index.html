@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Javascript Currying</title>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Mohammed Elzanaty">
+  <style>
+    body {
+      font-family: 'Raleway', Helvetica, arial, sans-serif;
+      font-size: 17px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h2 {
+      font-weight: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <h2></h2>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="index.js" type="module"></script>
+  <script>
+    const messages = [
+      "IT'S CONSOLE TIME 👇 🧑🏻‍💻",
+      'CHECK OUT THE CONSOLE 👇 🧑🏻‍💻',
+      'THE GOOD STUFF IS IN THE CONSOLE 👇 🧑🏻‍💻',
+      'OHHH. LOOK AT THE CONSOLE 👇 🧑🏻‍💻',
+      'GET TO CONSOLE 👇 🧑🏻‍💻'
+    ];
+    const randomMessage =
+      messages[Math.trunc(Math.random() * messages.length)];
+    document.querySelector("h2").innerHTML = randomMessage;
+  </script>
+</body>
+
+</html>
